@@ -1,0 +1,17 @@
+[theme]
+base = "dark"
+primaryColor = "#F5A524"
+backgroundColor = "#0F1117"
+secondaryBackgroundColor = "#181B24"
+textColor = "#E8EAF0"
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+enableXsrfProtection = true
+# Scraping + LLM calls can take a while; keep the websocket alive
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false

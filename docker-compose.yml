@@ -1,0 +1,24 @@
+services:
+  vybedeal:
+    build: .
+    image: vybedeal:latest
+    container_name: vybedeal
+    ports:
+      - "8501:8501"
+    environment:
+      # Single source is the secret file below. Only set GEMINI_API_KEY in CI –
+      # if both are present the app refuses to guess and exits with a hint.
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      VYBEDEAL_DATA_DIR: /app/data
+    volumes:
+      - vybedeal-data:/app/data
+    secrets:
+      - gemini_key
+    restart: unless-stopped
+
+secrets:
+  gemini_key:
+    file: ./secrets/gemini.key
+
+volumes:
+  vybedeal-data:

@@ -1,0 +1,17 @@
+# Never ship local state or secrets in the image
+secrets/
+data/
+.git/
+.gitignore
+.idea/
+.pytest_cache/
+__pycache__/
+*.pyc
+.venv/
+venv/
+tests/
+AGENTS.md
+README.md
+Dockerfile
+.dockerignore
+*.tmp

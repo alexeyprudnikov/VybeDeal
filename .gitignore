@@ -1,3 +1,16 @@
+# IDE / OS
 .idea/
 .DS_Store
-.streamlit
+
+# Secrets stay local – config.toml IS versioned
+secrets/*
+
+# Runtime state (favourites, price history, saved searches)
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/

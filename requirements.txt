@@ -1,4 +1,8 @@
-streamlit
-curl_cffi
-beautifulsoup4
-google-genai
+# Runtime deps – tested on Python 3.11-3.14.
+# curl_cffi provides the Chrome TLS fingerprint Kleinanzeigen expects.
+streamlit>=1.49,<2
+curl_cffi>=0.7
+beautifulsoup4>=4.12
+lxml>=5.0
+pandas>=2.2
+google-genai>=1.0
